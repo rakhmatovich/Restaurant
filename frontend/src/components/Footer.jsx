@@ -2,52 +2,52 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer bg-gray-800 text-white p-10">
+    <div className="footer bg-orange-100 text-gray-700 p-10">
       <div className="sb__footer section__padding">
         <div className="sb__footer-links flex flex-wrap justify-between items-start w-full text-left mb-8">
           <div className="sb__footer-links_div w-1/5 m-4">
             <h4 className="text-lg font-semibold mb-3">For Business</h4>
             <a href="/employer">
-              <p className="hover:text-yellow-500">Employer</p>
+              <p className="hover:text-orange-500">Employer</p>
             </a>
             <a href="/healthplan">
-              <p className="hover:text-yellow-500">Health Plan</p>
+              <p className="hover:text-orange-500">Health Plan</p>
             </a>
             <a href="/individual">
-              <p className="hover:text-yellow-500">Individual</p>
+              <p className="hover:text-orange-500">Individual</p>
             </a>
           </div>
           <div className="sb__footer-links_div w-1/5 m-4">
             <h4 className="text-lg font-semibold mb-3">Resources</h4>
             <a href="/resource">
-              <p className="hover:text-yellow-500">Resource center</p>
+              <p className="hover:text-orange-500">Resource center</p>
             </a>
             <a href="/resource">
-              <p className="hover:text-yellow-500">Testimonials</p>
+              <p className="hover:text-orange-500">Testimonials</p>
             </a>
             <a href="/resource">
-              <p className="hover:text-yellow-500">STV</p>
+              <p className="hover:text-orange-500">STV</p>
             </a>
           </div>
           <div className="sb__footer-links_div w-1/5 m-4">
             <h4 className="text-lg font-semibold mb-3">Partners</h4>
             <a href="/employer">
-              <p className="hover:text-yellow-500">Swing Tech</p>
+              <p className="hover:text-orange-500">Swing Tech</p>
             </a>
           </div>
           <div className="sb__footer-links_div w-1/5 m-4">
             <h4 className="text-lg font-semibold mb-3">Company</h4>
             <a href="/about">
-              <p className="hover:text-yellow-500">About</p>
+              <p className="hover:text-orange-500">About</p>
             </a>
             <a href="/press">
-              <p className="hover:text-yellow-500">Press</p>
+              <p className="hover:text-orange-500">Press</p>
             </a>
             <a href="/career">
-              <p className="hover:text-yellow-500">Career</p>
+              <p className="hover:text-orange-500">Career</p>
             </a>
             <a href="/contact">
-              <p className="hover:text-yellow-500">Contact</p>
+              <p className="hover:text-orange-500">Contact</p>
             </a>
           </div>
           <div className="sb__footer-links_div w-1/5 m-4">
@@ -74,22 +74,22 @@ const Footer = () => {
             <p>@{new Date().getFullYear()} All rights reserved.</p>
           </div>
           <div className="sb__footer-below-links flex">
-            <a href="/terms" className="mr-2 hover:text-yellow-500">
+            <a href="/terms" className="mr-2 hover:text-orange-500">
               <div>
                 <p>Terms & Conditions</p>
               </div>
             </a>
-            <a href="/privacy" className="mr-2 hover:text-yellow-500">
+            <a href="/privacy" className="mr-2 hover:text-orange-500">
               <div>
                 <p>Privacy</p>
               </div>
             </a>
-            <a href="/security" className="mr-2 hover:text-yellow-500">
+            <a href="/security" className="mr-2 hover:text-orange-500">
               <div>
                 <p>Security</p>
               </div>
             </a>
-            <a href="/cookie" className="hover:text-yellow-500">
+            <a href="/cookie" className="hover:text-orange-500">
               <div>
                 <p>Cookie declaration</p>
               </div>

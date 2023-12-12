@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   return (
@@ -74,17 +74,17 @@ const Footer = () => {
             <p>@{new Date().getFullYear()} All rights reserved.</p>
           </div>
           <div className="sb__footer-below-links flex">
-            <a href="/terms" className="mr-2 hover:text-orange-500">
+            <a href="/terms" className="mr-5 hover:text-orange-500">
               <div>
                 <p>Terms & Conditions</p>
               </div>
             </a>
-            <a href="/privacy" className="mr-2 hover:text-orange-500">
+            <a href="/privacy" className="mr-5 hover:text-orange-500">
               <div>
                 <p>Privacy</p>
               </div>
             </a>
-            <a href="/security" className="mr-2 hover:text-orange-500">
+            <a href="/security" className="mr-5 hover:text-orange-500">
               <div>
                 <p>Security</p>
               </div>
@@ -100,5 +100,6 @@ const Footer = () => {
     </div>
   );
 };
+
 
 export default Footer;

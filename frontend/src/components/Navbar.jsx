@@ -8,7 +8,9 @@ const Navbar = () => {
         <img className='rounded-full w-[55px] h-[55px]' src='/img/asia.jpg' alt="" />
       </div>
       <a href="" className="hover:text-orange-300 transition duration-300 text-black">О нас</a>
-      <a href="" className="hover:text-orange-300 transition duration-300 text-black">Меню</a>
+      <Link to="/menu" className="hover:text-orange-300 transition duration-300 text-black">
+        Меню
+      </Link>
       <Link to="/values" className="hover:text-orange-300 transition duration-300 text-black">
         Наши ценности
       </Link>

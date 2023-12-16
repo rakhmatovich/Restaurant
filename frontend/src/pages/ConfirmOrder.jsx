@@ -83,7 +83,7 @@ const OrderForm = () => {
                 <div className="form-input mb-5">
                   <label>Адрес</label>
                   <input
-                    className="border border-gray-300 p-2 mb-2 w-full"
+                    className="border border-gray-300 p-2 mb-5 w-full rounded-xl"
                     type="text"
                     placeholder="Введите адрес доставки"
                     value={address}
@@ -93,17 +93,18 @@ const OrderForm = () => {
                 <div className="form-input mb-5">
                   <label>Ориентир</label>
                   <input
-                    className="border border-gray-300 p-2 mb-5 w-full"
+                    className="border border-gray-300 p-2 mb-5 w-full rounded-xl"
                     type="text"
                     placeholder="Введите ориентир"
                     value={landmark}
                     onChange={(e) => setLandmark(e.target.value)}
+
                   />
                 </div>
                 <div className="form-input mb-5">
                   <label>Время доставки</label>
                   <input
-                    className="border border-gray-300 p-2 mb-2 w-full"
+                    className="border border-gray-300 p-2 mb-2 w-full rounded-xl"
                     type="text"
                     placeholder="Выберите время доставки"
                     value={deliveryTime}
@@ -114,7 +115,8 @@ const OrderForm = () => {
             </>
             :
             <div className="form-input mb-5">
-              <label className="block mb-2 mr-4">
+              <label className="block mb-2">Выберите филиал</label>
+              <label className="block mb-5 mr-4 rounded-xl">
                 <input
                   type="radio"
                   value="click"
@@ -122,11 +124,11 @@ const OrderForm = () => {
                   onChange={() => setLocationSelect("click")}
                   className="text-brown-500 focus:ring-brown-500"
                 />
-                 Safia Бухара
+                Safia Бухара
               </label>
               <label>Время самовывоза</label>
               <input
-                className="border border-gray-300 p-2 mb-2 w-full"
+                className="border border-gray-300 p-2 mb-2 w-full rounded-xl"
                 type="text"
                 placeholder="Выберите время самовывоза"
                 value={deliveryTime}
@@ -238,10 +240,10 @@ const OrderForm = () => {
               </label>
             </div>
           </div>
-          <div className="form-input mb-5">
+          <div className="form-input mb-5 ">
             <label>Комментарий</label>
             <textarea
-              className="border border-gray-300 p-2 mb-4 w-full"
+              className="border border-gray-300 p-2 mb-4 w-full rounded-xl"
               placeholder="Комментарий к заказу"
               value={comment}
               onChange={(e) => setComment(e.target.value)}

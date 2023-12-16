@@ -12,9 +12,11 @@ const Navbar = () => {
       <Link to="/values" className="hover:text-orange-300 transition duration-300 text-black">
         Наши ценности
       </Link>
+      <Link to={'/Location'}>
       <a href="" className="hover:text-orange-300 transition duration-300 text-black">Локации</a>
+      </Link>
       <a href="" className="hover:text-orange-300 transition duration-300 text-black">Карьера</a>
-      <Link to="/keytering" className="hover:text-orange-300 transition duration-300 text-black">
+      <Link to="/keytering" className="hover:+++++++++++++++++++++++++++++++++++++++++text-orange-300 transition duration-300 text-black">
         Кейтеринг
       </Link>
       <div className='flex gap-5 items-center'>

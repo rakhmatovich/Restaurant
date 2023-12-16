@@ -11,8 +11,9 @@ const bestSellingProducts = [
   },
   {
     id: 2,
-    title: "Вишенка тарт",
-    description: "Песочное тесто с классическим ганашом и свежей вишней. Торт расчитан на 6-8 человек",
+    title: "Вишенка торт",
+    description:
+      "Песочное тесто с классическим ганашом и свежей вишней. Торт расчитан на 6-8 человек",
     price: "9.2",
     url: "https://safiabakery.uz/uploads/products/thumbs/171_1672828185.png",
   },
@@ -35,7 +36,7 @@ const bestSellingProducts = [
 
 export default function BestSelling() {
   return (
-    <div className="mt-[100px] py-10" >
+    <div className="mt-[100px] py-10">
       <p className="text-[40px] text-center">Топ Продаж</p>
       <div className="my-10 flex justify-center gap-10 w-[80%] mx-auto">
         {bestSellingProducts.map((item) => (

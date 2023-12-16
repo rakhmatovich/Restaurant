@@ -35,15 +35,15 @@ const Cart = () => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
   };
 
-  // const empty = () => {
-  //   if (cartItems.length === 0) {
-  //     return <p>Ничего не найдено</p>;
-  //   }
-
   return (
     <div className="p-12">
-      {cartItems.length  === 0 ? (
-        <h2 className="text-2xl font-bold mb-4">Ничего не найдено</h2>
+      {cartItems.length === 0 ? (
+        <>
+          <h2 className="text-2xl text-center font-bold mb-4">
+            Нечего не найдено
+          </h2>
+          
+        </>
       ) : (
         <div>
           <h2 className="text-2xl font-bold mb-4">Корзина</h2>
@@ -59,7 +59,7 @@ const Cart = () => {
                 <h1 className="font-bold">Цена</h1>
                 <p className=" text-gray-500">{item.price}Сум</p>
               </div>
-              <div className="flex items-center bg-gray-500 rounded-full">
+              <div className="flex  py-2 px-3 items-center bg-amber-600 rounded-full">
                 <button onClick={() => minus(item.id)} className="mx-2">
                   -
                 </button>

@@ -5,6 +5,7 @@ import Keytering from './pages/Keytering'
 import Values from './pages/Values'
 import ConfirmOrder from './pages/ConfirmOrder'
 import Menu from './pages/Menu'
+import Location from './pages/Location'
 
 
 export default function Router() {
@@ -16,6 +17,7 @@ export default function Router() {
                 <Route path='/values' element={<Values />} />
                 <Route path='/confirmorder' element={<ConfirmOrder />} />
                 <Route path='/menu' element={<Menu />} />
+                <Route path='/Location' element={<Location />} />
             </Routes>
         </BrowserRouter>
     )

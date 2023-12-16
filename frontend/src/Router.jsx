@@ -5,6 +5,12 @@ import Login from './pages/Login'
 import SingUp from './pages/SingUp'
 import Cart from './pages/Cart'
 import AboutUs from './pages/AboutUs'
+import Keytering from './pages/Keytering'
+import Values from './pages/Values'
+import ConfirmOrder from './pages/ConfirmOrder'
+import Menu from './pages/Menu'
+import Location from './pages/Location'
+
 
 export default function Router() {
     return (
@@ -15,6 +21,11 @@ export default function Router() {
                 <Route path='/SingUp' element={<SingUp />} />
                 <Route path='/Cart' element={<Cart />} />
                 <Route path='/AboutUs' element={<AboutUs />} />
+                <Route path='/keytering' element={<Keytering />} />
+                <Route path='/values' element={<Values />} />
+                <Route path='/confirmorder' element={<ConfirmOrder />} />
+                <Route path='/menu' element={<Menu />} />
+                <Route path='/Location' element={<Location />} />
             </Routes>
         </BrowserRouter>
     )

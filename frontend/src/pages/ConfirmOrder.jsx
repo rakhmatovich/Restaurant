@@ -68,6 +68,7 @@ const OrderForm = () => {
             <>
               <div className="mb-10">
                 <iframe
+                  title='location'
                   className="w-full h-48 mb-4"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.9364376835156!2d64.430252!3d39.76353549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50078e80fb306b%3A0xf5811f8cb8769d10!2sSafia!5e0!3m2!1sru!2s!4v1702119548501!5m2!1sru!2s"
                   width="600"

@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ConfirmOrder from "../pages/ConfirmOrder";
+
 const Navbar = () => {
   return (
     <nav className="flex font-bold justify-evenly gap-5 items-center bg-white py-4">
-      <div>
+      <Link to='/'>
         <img
           className="rounded-full w-[55px] h-[55px]"
           src="/img/asia.jpg"
           alt=""
         />
-      </div>
+      </Link>
       <Link
         to={"/AboutUs"}
         className="hover:text-orange-300 transition duration-300 text-black"

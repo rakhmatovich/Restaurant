@@ -27,12 +27,6 @@
       "type": "media",
       "multiple": false
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "products"
-    },
     "price": {
       "type": "biginteger"
     },
@@ -47,6 +41,18 @@
       "relation": "oneToOne",
       "target": "api::cart-item.cart-item",
       "mappedBy": "product"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "extra_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::extra-category.extra-category",
+      "inversedBy": "products"
     }
   }
 }

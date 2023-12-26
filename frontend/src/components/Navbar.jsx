@@ -48,6 +48,7 @@ const Navbar = () => {
             alt=""
           />
         </a>
+        <Link to={'/Login'}>
         <a href="">
           <img
             className="rounded-full w-[20px] h-[20px]"
@@ -55,7 +56,8 @@ const Navbar = () => {
             alt=""
           />
         </a>
-        <Link to="/ConfirmOrder">
+        </Link>
+        <Link to="/Cart">
           <img
             className="rounded-full w-[20px] h-[20px]"
             src="/img/cart.png"

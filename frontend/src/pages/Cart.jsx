@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Layout from "../components/Layout";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -36,6 +37,7 @@ const Cart = () => {
   };
 
   return (
+    <Layout>
     <div className="p-12">
       {cartItems.length === 0 ? (
         <>
@@ -82,6 +84,7 @@ const Cart = () => {
         <p className="text-xl font-bold">Итог:{getTotalPrice()}Сум</p>
       </div>
     </div>
+    </Layout>
   );
 };
 

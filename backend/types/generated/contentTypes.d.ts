@@ -728,6 +728,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     singularName: 'category';
     pluralName: 'categories';
     displayName: 'Category';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -736,7 +737,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     title: Attribute.String;
     products: Attribute.Relation<
       'api::category.category',
-      'oneToMany',
+      'manyToMany',
       'api::product.product'
     >;
     createdAt: Attribute.DateTime;
@@ -750,6 +751,41 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::category.category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExtraCategoryExtraCategory extends Schema.CollectionType {
+  collectionName: 'extra_categories';
+  info: {
+    singularName: 'extra-category';
+    pluralName: 'extra-categories';
+    displayName: 'Extra Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    products: Attribute.Relation<
+      'api::extra-category.extra-category',
+      'oneToMany',
+      'api::product.product'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extra-category.extra-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::extra-category.extra-category',
       'oneToOne',
       'admin::user'
     > &
@@ -854,11 +890,6 @@ export interface ApiProductProduct extends Schema.CollectionType {
     name: Attribute.String;
     description: Attribute.Text;
     image: Attribute.Media;
-    category: Attribute.Relation<
-      'api::product.product',
-      'manyToOne',
-      'api::category.category'
-    >;
     price: Attribute.BigInteger;
     reviews: Attribute.Relation<
       'api::product.product',
@@ -869,6 +900,16 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::product.product',
       'oneToOne',
       'api::cart-item.cart-item'
+    >;
+    categories: Attribute.Relation<
+      'api::product.product',
+      'manyToMany',
+      'api::category.category'
+    >;
+    extra_category: Attribute.Relation<
+      'api::product.product',
+      'manyToOne',
+      'api::extra-category.extra-category'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -947,6 +988,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::cart-item.cart-item': ApiCartItemCartItem;
       'api::category.category': ApiCategoryCategory;
+      'api::extra-category.extra-category': ApiExtraCategoryExtraCategory;
       'api::order.order': ApiOrderOrder;
       'api::order-product.order-product': ApiOrderProductOrderProduct;
       'api::product.product': ApiProductProduct;

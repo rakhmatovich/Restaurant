@@ -55,7 +55,7 @@ const Navbar = () => {
             alt=""
           />
         </a>
-        <Link to="/ConfirmOrder">
+        <Link to="/Cart">
           <img
             className="rounded-full w-[20px] h-[20px]"
             src="/img/cart.png"

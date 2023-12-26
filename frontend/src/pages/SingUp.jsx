@@ -8,10 +8,10 @@ const Login = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full h-[100vh] bg-center bg-[url('https://safiabakery.uz/uploads/pages/pb_1680769318.jpg')]">
+      <div className="w-full h-[100vh] bg-center bg-cover bg-[url('https://safiabakery.uz/uploads/pages/pb_1680769318.jpg')]">
         <div className="w-full h-full bg-black/50 flex items-center justify-center">
           <div className="flex justify-center items-center h-screen">
-            <div className="bg-black/40 border border-black py-[40px] px-[20px] rounded-xl shadow-md">
+            <div className="bg-black/40 border  shadow-2xl border-black py-[100px] px-[50px] rounded-xl ">
               <h2 className="text-2xl text-emerald-500 font-bold mb-4">
                 Sing Up
               </h2>

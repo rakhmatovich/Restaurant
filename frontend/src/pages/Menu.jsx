@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import axios from "axios";
 import { useEffect } from "react";
-import { CATEGORIES } from "../utils/urls";
+import { CATEGORIES, FILTERES_PRODUCTS } from "../utils/urls";
 import { PRODUCTS } from '../utils/urls';
+import { BsBag } from "react-icons/bs";
 
 export default function Menu() {
   const [categories, setCategories] = useState(null);
@@ -16,6 +17,7 @@ export default function Menu() {
       })
       .catch(error => {
         console.log(error);
+   
       });
 
     loadProducts()
@@ -27,7 +29,12 @@ export default function Menu() {
       .catch(console.error)
   }
 
-  console.log(products);
+  const filter = (title) => {
+    axios
+      .get(FILTERES_PRODUCTS.replace('{title}', title.replace(' ', '%20')))
+      .then((res) => setProducts(res.data.data))
+      .catch((err) => console.log(err));
+  };
 
   return (
     <Layout>
@@ -47,6 +54,8 @@ export default function Menu() {
           {categories?.map(category => (
             <button
               key={category.id}
+              onClick={() => filter(category.attributes.title)
+              }
               className='bg-orange-300 hover:text-orange-700 transition duration-300 pr-[2rem] pl-[2rem] py-2 rounded-3xl mb-4 mx-2'>
               {category.attributes.title}
             </button>
@@ -61,23 +70,27 @@ export default function Menu() {
       <br />
       <br />
 
-      <div className="container mx-auto">
+      <div className="container mx-auto w-[90%] flex flex-wrap justify-center gap-2">
         {products?.map(product => (
-          <div className="flex overflow-x-auto space-x-12 pl-7 pr-7" key={product.id}>
-            <div className="flex flex-col items-center">
-              <div>
-                <a href="/ru/menu/kruglie-torti-2024" title="Круглые торты 2024">
-                  <img
-                    src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
-                    alt="Круглые торты 2024"
-                    className="w-[196px] h-[196px] object-cover lazyload rounded-full"
-                  />
-                </a>
+          <div className="flex flex-col items-center w-[23%] text-center mb-8" key={product.id}>
+            <div className='relative'>
+              <img
+                src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
+                alt="Круглые торты 2024"
+                className="w-full object-cover lazyload rounded-full"
+
+              />
+              <div className='absolute right-2 bottom-2 bg-orange-200 rounded-full w-20 h-20 border-4 border-white flex items-center justify-center'>
+                <BsBag className='text-2xl' color='#fff' size={35} />
               </div>
-              <div className="mt-2">
-                <a href="/ru/menu/kruglie-torti-2024" className="text-center">Круглые торты 2024</a>
-              </div>
+
             </div>
+
+            <div className="mt-2">
+              «{product.attributes.name}»
+            </div>
+            <p className='text-gray-500 text-[14px] my-7'>{product.attributes.description}</p>
+            <p className='text-[20px]'>{product.attributes.price} сум</p>
           </div>
         ))}
       </div>

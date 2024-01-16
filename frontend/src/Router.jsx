@@ -10,6 +10,8 @@ import Values from './pages/Values'
 import ConfirmOrder from './pages/ConfirmOrder'
 import Menu from './pages/Menu'
 import Location from './pages/Location'
+import Caakcy from './pages/Caakcy'
+
 
 
 export default function Router() {
@@ -26,6 +28,8 @@ export default function Router() {
                 <Route path='/confirmorder' element={<ConfirmOrder />} />
                 <Route path='/menu' element={<Menu />} />
                 <Route path='/Location' element={<Location />} />
+                <Route path='/Caakcy' element={<Caakcy />} />
+
             </Routes>
         </BrowserRouter>
     )
